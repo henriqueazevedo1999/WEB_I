@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Página 7</title>
+</head>
+<body>
+    <header>Página 7</header>
+    <main>
+        <div id="div1">
+        </div>
+        <a href="index2.html">Retorna</a>
+        <div id="mensagem"></div>
+        <button onclick="retornaIdade()">Retorna idade</button>
+        <button onclick="retNmPessoa()">Retorna nome pessoa</button>
+        <button onclick="retTab1()">Retorna tabela[1]</button>
+    </main>
+</body>
+<script>
+    function retTab1() {
+        var vetPessoas = JSON.parse(localStorage.getItem("tabela"));
+        document.getElementById("mensagem").innerHTML =
+            vetPessoas[1].codigo+" - "+vetPessoas[1].nome;
+    }
+    function retNmPessoa() {
+        var vPessoa = JSON.parse(localStorage.getItem("pessoa"));
+        document.getElementById("mensagem").innerHTML =
+            vPessoa.nome;
+    }
+    function retornaIdade() {
+        document.getElementById("mensagem").innerHTML =
+          localStorage.getItem("idade");
+    }
+    document.getElementById("div1").innerHTML = document.cookie;
+</script>
+</html>

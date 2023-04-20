@@ -1,0 +1,56 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Item 1</title>
+</head>
+
+<body>
+    <header>Item 1</header><br>
+    <br>
+    <input type="number" name="valor1" id="valor1"><br>
+    <input type="number" name="valor2" id="valor2"><br>
+    <br>
+    <button onclick="imprimeSoma()">Soma</button><br>
+    <br>
+    <p id="resultado">Soma: 0</p><br>
+    <button onclick="compara()">Compara</button><br>
+    <br>
+    <p id="comparacao"></p>
+    <footer>
+        <a href="index.html">Página principal</a>
+    </footer>
+</body>
+<script>
+    function soma(valor1, valor2) {
+        return Number(valor1) + Number(valor2);
+    }
+
+    function imprimeSoma() {
+        var valor1 = document.getElementById("valor1").value;
+        var valor2 = document.getElementById("valor2").value;
+        document.getElementById("resultado").innerText = "Soma: " + soma(valor1, valor2);
+    }
+
+    function compara() {
+        var valor1 = document.getElementById("valor1").value;
+        var valor2 = document.getElementById("valor2").value;
+        var resultado = soma(valor1, valor2);
+        if (valor1 > valor2) {
+            document.getElementById("comparacao").innerText = "Primeiro número é maior";
+            document.getElementById("comparacao").classList.backgroundColor = "red";
+        } else if (valor2 > valor1) {
+            document.getElementById("comparacao").innerText = "Segundo número é maior";
+            document.getElementById("comparacao").style.backgroundColor = "green";
+        } else {
+            document.getElementById("comparacao").innerText = "Ambos são iguais";
+            document.getElementById("comparacao").style.backgroundColor = "yellow";
+        }
+    }
+
+</script>
+
+</html>

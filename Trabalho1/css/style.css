@@ -1,0 +1,45 @@
+header {
+    background-color: lightblue;
+    font-size: larger;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.menuPrincipal>li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: lightgray;
+    color: white;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 50%;
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid black;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+td,
+th {
+    border: 2px solid black;
+    height: 100px;
+}
