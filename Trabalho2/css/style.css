@@ -35,3 +35,49 @@ button {
     border-radius: 5px;
     text-align: center;
 }
+
+.tabela, .tabela td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+.tabela tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+.tabela tr:hover {
+    background-color: lightblue;
+}
+
+.tabela tr:active {
+    font-weight: bold;
+}
+
+#game-board {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .letter-box {
+    border: 2px solid gray;
+    border-radius: 3px;
+    margin: 2px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  
+  .filled-box {
+    border: 2px solid black;
+  }
+  
+  .letter-row {
+    display: flex;
+  }

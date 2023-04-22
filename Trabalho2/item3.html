@@ -5,17 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Item 3</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
     <header>Item 3</header>
     <br>
-
-
-
+    <button onclick="alert('Olá, mundo!')">Alerta</button><br><br>
+    <ul id="comidasFavoritas">
+        <li>Pizza</li>
+        <li>Churrasco</li>
+        <li>Sushi</li>
+        <li>Hambúrguer</li>
+        <li>Fondue</li>
+    </ul><br>
+    <input type="number" id="numberInput"> <button onclick="exibeParImpar()">Par? Ímpar?</button><br><br>
+    <table id="tabela" class="tabela">
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>Endereço</th>
+        <tr>
+            <td>José</td>
+            <td>(47)98888-8888</td>
+            <td>Rua Itápolis</td>
+        </tr>
+        <tr>
+            <td>Alfredo</td>
+            <td>(47)94444-4444</td>
+            <td>Rua Indaial</td>
+        </tr>
+        <tr>
+            <td>Francisco</td>
+            <td>(47)99999-9999</td>
+            <td>Rua das Acácias</td>
+        </tr>
+    </table><br><br>
     <footer>
         <a href="index.html">Página principal</a>
     </footer>
 </body>
 <script>
+    $('#comidasFavoritas').on('click', 'li', function () {
+        const nomeComida = $(this).text();
+        alert(nomeComida);
+    });
+    
+    $('#tabela').on('click', 'td', function () {
+        const conteudo = $(this).text();
+        alert(conteudo);
+    });
+
+    function exibeParImpar() {
+        var numero = document.getElementById("numberInput").value
+        if (Number(numero) % 2 == 0) {
+            alert('Par');
+        } else {
+            alert('Ímpar');
+        }
+    }
 </script>
 </html>
