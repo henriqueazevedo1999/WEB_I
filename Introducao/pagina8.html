@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 8</title>
+</head>
+<script>
+    function minhaFuncao() {
+        document.getElementById("mensagem").innerHTML = "Chamou função";
+    }
+
+    function chamaCallback(p1, pFuncao) {
+        document.getElementById("mensagem").innerHTML = "Chamou callback com função " + pFuncao;
+    }
+</script>
+<body>
+    <header>Página 8</header>
+    <main>
+        <a href="pagina7.html">Página 7</a><br><br>
+        <div id="mensagem"></div><br>
+        <button onclick="minhaFuncao()">Chama função 1</button>
+        <button onclick="chamaCallback(1, x)">Chama função callback 1</button>
+    </main>
+</body>
+</html>

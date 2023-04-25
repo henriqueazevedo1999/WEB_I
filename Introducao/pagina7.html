@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/classPessoa.js"></script>
     <title>Página 7</title>
 </head>
+
 <body>
     <header>Página 7</header>
     <main>
@@ -17,13 +19,28 @@
         <button onclick="retornaIdade()">Retorna idade</button>
         <button onclick="retNmPessoa()">Retorna nome pessoa</button>
         <button onclick="retTab1()">Retorna tabela[1]</button>
+        <div>
+            <input type="text" name="nmPessoa" id="nmPessoa"><br>
+            <input type="date" name="dtNascimento" id="dtNascimento"><br>
+            <button onclick="instanciaPessoa()">Instancia Pessoa</button>
+        </div>
     </main>
 </body>
 <script>
+    function instanciaPessoa() {
+        console.log("dt: " + document.getElementById("dtNascimento").value);
+        var vPessoa = new Pessoa(
+            document.getElementById("nmPessoa").value,
+            document.getElementById("dtNascimento").value
+        );
+        console.log(vPessoa);
+        console.log("Idade: " + vPessoa.getIdade())
+    }
+
     function retTab1() {
         var vetPessoas = JSON.parse(localStorage.getItem("tabela"));
         document.getElementById("mensagem").innerHTML =
-            vetPessoas[1].codigo+" - "+vetPessoas[1].nome;
+            vetPessoas[1].codigo + " - " + vetPessoas[1].nome;
     }
     function retNmPessoa() {
         var vPessoa = JSON.parse(localStorage.getItem("pessoa"));
@@ -32,8 +49,9 @@
     }
     function retornaIdade() {
         document.getElementById("mensagem").innerHTML =
-          localStorage.getItem("idade");
+            localStorage.getItem("idade");
     }
     document.getElementById("div1").innerHTML = document.cookie;
 </script>
+
 </html>
