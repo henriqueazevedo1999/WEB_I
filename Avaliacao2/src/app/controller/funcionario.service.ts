@@ -11,13 +11,23 @@ export class FuncionarioService {
   constructor() { }
 
   getFuncionarios(): Observable<Funcionario[]> {
-    return of(this.funcionarios);
+    return of<Funcionario[]>(this.funcionarios);
   }
   
   //#region funcionarios
   private funcionarios: Funcionario[] = [
     {
       id: 1,
+      nome: "Michael Scott",
+      foto: "https://i.ibb.co/P6G0Syp/michael.png",
+      email: "michael.scott@mac.com",
+      subobjeto: {
+        propriedade1: "Valor 1",
+        propriedade2: "Valor 2"
+      }
+    },
+    {
+      id: 2,
       nome: "Alonzo Birden",
       foto: "https://robohash.org/praesentiumomnisdolore.png?size=50x50&set=set1",
       email: "abirden0@mac.com",
@@ -27,7 +37,7 @@ export class FuncionarioService {
       }
     },
     {
-      id: 2,
+      id: 3,
       nome: "Celle McKissack",
       foto: "https://robohash.org/explicaboenimquo.png?size=50x50&set=set1",
       email: "cmckissack1@zdnet.com",
@@ -37,7 +47,7 @@ export class FuncionarioService {
       }
     },
     {
-      id: 3,
+      id: 4,
       nome: "Clarisse Beveridge",
       foto: "https://robohash.org/officiisconsequaturvoluptas.png?size=50x50&set=set1",
       email: "cbeveridge2@statcounter.com",
@@ -47,7 +57,7 @@ export class FuncionarioService {
       }
     },
     {
-      id: 4,
+      id: 5,
       nome: "Donelle Mallen",
       foto: "https://robohash.org/mollitiasedsunt.png?size=50x50&set=set1",
       email: "dmallen3@go.com",
@@ -57,7 +67,7 @@ export class FuncionarioService {
       }
     },
     {
-      id: 5,
+      id: 6,
       nome: "Rufe Gunner",
       foto: "https://robohash.org/possimusnihilnihil.png?size=50x50&set=set1",
       email: "rgunner4@dyndns.org",
@@ -67,7 +77,7 @@ export class FuncionarioService {
       }
     },
     {
-      id: 6,
+      id: 7,
       nome: "Dulci Sueter",
       foto: "https://robohash.org/quiscommodiullam.png?size=50x50&set=set1",
       email: "dsueter5@slashdot.org",
@@ -77,7 +87,7 @@ export class FuncionarioService {
       }
     },
     {
-      id: 7,
+      id: 8,
       nome: "Ali Kingsbury",
       foto: "https://robohash.org/optioestexercitationem.png?size=50x50&set=set1",
       email: "akingsbury6@flavors.me",
@@ -87,7 +97,7 @@ export class FuncionarioService {
       }
     },
     {
-      id: 8,
+      id: 9,
       nome: "Loretta Mathevet",
       foto: "https://robohash.org/dolorfacilisquia.png?size=50x50&set=set1",
       email: "lmathevet7@imgur.com",
@@ -97,7 +107,7 @@ export class FuncionarioService {
       }
     },
     {
-      id: 9,
+      id: 10,
       nome: "Jacquenetta Abthorpe",
       foto: "https://robohash.org/voluptatemtemporaveniam.png?size=50x50&set=set1",
       email: "jabthorpe8@fema.gov",
@@ -107,7 +117,7 @@ export class FuncionarioService {
       }
     },
     {
-      id: 10,
+      id: 11,
       nome: "Bronnie Denis",
       foto: "https://robohash.org/esteaquedolores.png?size=50x50&set=set1",
       email: "bdenis9@dailymotion.com",
@@ -116,6 +126,6 @@ export class FuncionarioService {
         propriedade2: "Valor 20"
       }
     }
-  ];
+  ];  
   //#endregion
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FuncionarioService } from 'src/app/controller/funcionario.service';
 import { Funcionario } from 'src/app/model/funcionario';
 
@@ -8,14 +8,14 @@ import { Funcionario } from 'src/app/model/funcionario';
   styleUrls: ['./funcionario.component.css']
 })
 
-export class FuncionarioComponent implements OnInit {
-  funcionarios: Funcionario[] = [];
+export class FuncionarioComponent {
+  vetFuncionarios: Funcionario[] = [];
 
-  constructor(private funcionarioService: FuncionarioService) {}
+  constructor(private funcionarioService: FuncionarioService) { }
 
   ngOnInit(): void {
-    this.funcionarioService.getFuncionarios().subscribe(data => {
-      this.funcionarios = data;
-    });
+    this.funcionarioService.getFuncionarios().subscribe(
+      data => this.vetFuncionarios = data
+    );
   }
 }
