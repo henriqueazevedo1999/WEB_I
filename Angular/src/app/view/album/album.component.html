@@ -1,0 +1,22 @@
+<div>
+    <input type="text" [(ngModel)]="vId">
+    <button (click)="encontraAlbum()">Pesquisa album</button>
+    <button (click)="apagaAlbum()">Apaga album</button>
+    <div style="border: 1px solid black; padding: 5px;">{{ vAlbum.id+"("+vAlbum.userId+") - "+vAlbum.title }}</div>
+</div>
+<div style="border: 1px solid black; padding: 5px;">
+    <input type="text" [(ngModel)]="vAlbum2.userId">
+    <input type="text" [(ngModel)]="vAlbum2.title">
+    <button (click)="insereAlbum()">Insere album</button>
+    <button (click)="alteraAlbum()">Altera album</button>
+</div>
+<div>
+    <table>
+        <tr *ngFor="let album of vetAlbums">
+            <td>{{ album.id }}</td>
+            <td>{{ album.title }}</td>
+            <td>{{ album.userId }}</td>
+        </tr>
+    </table>
+</div>
+<p>&nbsp;</p>

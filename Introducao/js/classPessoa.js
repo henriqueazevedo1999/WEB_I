@@ -1,16 +1,34 @@
 class Pessoa {
-    constructor(pName, pDtNasc) {
-        this.nome = pName;
+    constructor(pNome, pDtNasc) {
+        this.nmPessoa = pNome;
         this.dtNasc = new Date(pDtNasc);
-    };
-
-    getNome() {
-        return this.nome;
     }
 
+    getNmPessoa() {
+        return this.nmPessoa;
+    }
     getIdade() {
-        var ageDifMs = Date.now() - this.dtNasc;
-        var ageDate = new Date(ageDifMs); // miliseconds from epoch
-        return Math.abs(ageDate.getUTCFullYear() - 1970);
+        var hoje = new Date();
+        return hoje.getFullYear() - this.dtNasc.getFullYear();
+    }
+}
+
+class Aluno extends Pessoa {
+    constructor(pNome, pDtNasc, pCurso) {
+        super(pNome,pDtNasc);
+        this.nmCurso = pCurso;
+    }
+    getNmCurso() {
+        return this.nmCurso;
+    }
+}
+
+class Professor extends Pessoa {
+    constructor(pNome, pDtNasc, pDepto) {
+        super(pNome,pDtNasc);
+        this.nmDepto = pDepto;
+    }
+    getNmDepto() {
+        return this.nmDepto;
     }
 }

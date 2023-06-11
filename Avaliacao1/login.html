@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/login.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Login STD</title>
+  <link rel="icon" type="image/x-icon" href="img/livro.ico">
+  <!-- <link href="signin.css" rel="stylesheet"> -->
+  <script src="https://kit.fontawesome.com/575edc21c4.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="text-center w-100" onload="validaLogin()">
+  <div class="container-fluid">
+    <div class="row bg-dark">
+      <div class="col-md-1 d-flex justify-content-center align-items-center">
+        <a href="index.html"><img src="img/logo.png" class="rounded-circle" id="image"></a>
+      </div>
+      <div class="col-md-5">
+        <spam class="float-end text-white p-4 fw-bold fs-5 ">
+          Escola STD</spam>
+      </div>
+      <div class="col-md-6">
+        <div class="text-end">
+          <img src="img/usuarioLogado.jpg" class="rounded-circle" id="imageLogado">
+          <spam class="float-end text-white p-4" id="usuarioLogado">
+            <i class="fa-solid fa-user fa-2xl" id="iconLogin"></i>
+            Usuário não informado
+          </spam>
+        </div>
+      </div>
+    </div>
+    <main class="form-signin">
+      <div id="fundo" align="center">
+        <div id="fundoLogin" class="row col-xs-4 col-sm-4 col-md-4 col-lg-4" align="center"
+          style="background-color:rgba(138, 138, 138, 0.582)">
+          <form>
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+              class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+              <path
+                d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z" />
+            </svg>
+            <br>
+            <br>
+            <div class="form-floating">
+              <div class="col-md-4 col-lg-4">
+                <label for="login">Login</label>
+                <input type="login" class="form-control w-80" id="login" placeholder="Login"
+                  oninput="habilitaAutenticacao()">
+              </div>
+            </div>
+            <div class="form-floating">
+              <div class="col-md-4 col-lg-4">
+                <label for="password">Senha</label>
+                <input type="password" class="form-control w-80" id="password" placeholder="Password"
+                  oninput="habilitaAutenticacao()">
+              </div>
+            </div>
+            <br>
+            <button type="submit" class="w-40 btn btn-lg btn-danger" id="autentica" onclick="autenticar()"
+              disabled>Autenticar</button>
+            <div>
+              <a href=""> Esqueceu a senha?</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="flex-shrink-0 bg-dark text-white-50">
+      <div class="text-center">
+        <spam class="text-white-50 p-3">Henrique Azevedo</spam>
+      </div>
+    </footer>
+</body>
+
+</html>

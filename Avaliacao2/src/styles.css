@@ -1,0 +1,27 @@
+.card {
+    width: 250px;
+    text-align: center;
+    background-color: black;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .card img {
+    width: 100%;
+  }
+  
+  .card h2, .card p {
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+  
+  .card a {
+    font-family: Verdana, sans-serif;
+    background-color: gray;
+    color: white;
+    display: block;
+    padding: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+  }
+  

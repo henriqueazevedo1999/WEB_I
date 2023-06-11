@@ -1,0 +1,10 @@
+<table>
+    <tr *ngFor="let photo of vetPhotos">
+        <td>{{ photo.id }}</td>
+        <td>{{ photo.albumId }}</td>
+        <td>{{ photo.title }}</td>
+        <td><img src="{{ photo.thumbnailUrl }}"></td>
+        <td><a href="{{ photo.url }}" target="_blank">Ver foto</a></td>
+    </tr>
+</table>
+<p>&nbsp;</p>
